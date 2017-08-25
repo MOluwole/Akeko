@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.yung_coder.oluwole.akeko.fragments.BookList
+import com.yung_coder.oluwole.akeko.fragments.VideoList
 import kotlinx.android.synthetic.main.activity_material.*
 
 class Material : AppCompatActivity() {

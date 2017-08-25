@@ -1,4 +1,4 @@
-package com.yung_coder.oluwole.akeko
+package com.yung_coder.oluwole.akeko.fragments
 
 
 import android.content.Context
@@ -18,6 +18,8 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.yung_coder.oluwole.akeko.MainActivity
+import com.yung_coder.oluwole.akeko.R
 import com.yung_coder.oluwole.akeko.adapters.BookAdapter
 import com.yung_coder.oluwole.akeko.db.DbManager
 import com.yung_coder.oluwole.akeko.models.Models
