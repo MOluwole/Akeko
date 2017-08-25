@@ -1,4 +1,4 @@
-package com.yung_coder.oluwole.akeko
+package com.yung_coder.oluwole.akeko.db
 
 /**
  * Created by yung on 8/23/17.
@@ -13,4 +13,7 @@ object AkekooTable {
     val NAME = "name"
     val TITLE = "title"
     val COPYRIGHT = "copyright"
+
+    val TIMER_TABLE = "timer"
+    val TIMER_COL = "_time"
 }

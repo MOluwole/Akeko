@@ -1,4 +1,4 @@
-package com.yung_coder.oluwole.akeko
+package com.yung_coder.oluwole.akeko.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

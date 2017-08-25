@@ -1,15 +1,20 @@
-package com.yung_coder.oluwole.akeko
+package com.yung_coder.oluwole.akeko.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
-import com.amulyakhare.textdrawable.util.ColorGenerator
 import com.amulyakhare.textdrawable.TextDrawable
-
+import com.amulyakhare.textdrawable.util.ColorGenerator
+import com.yung_coder.oluwole.akeko.Material
+import com.yung_coder.oluwole.akeko.Menu
+import com.yung_coder.oluwole.akeko.R
+import com.yung_coder.oluwole.akeko.models.Models
 
 
 /**
@@ -35,6 +40,13 @@ class LangAdapter constructor(mList: List<Models.lang>): RecyclerView.Adapter<La
         val letter = lang_data?.name?.get(0).toString()
         val drawable = TextDrawable.builder().buildRound(letter, generator.randomColor)
         holder?.mag_thumbnail?.setImageDrawable(drawable)
+
+        holder?.lang_item?.setOnClickListener {
+            var lang_id = lang_data?._id.toString()
+            var intent = Intent(app_context as Menu, Material::class.java)
+            intent.putExtra("lang_id", lang_id)
+            app_context?.startActivity(intent)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): LangViewAdapter {
@@ -47,5 +59,7 @@ class LangAdapter constructor(mList: List<Models.lang>): RecyclerView.Adapter<La
     class LangViewAdapter(layoutView: View): RecyclerView.ViewHolder(layoutView) {
         var mag_name = layoutView.findViewById<TextView>(R.id.lang_name)!!
         var mag_thumbnail = layoutView.findViewById<ImageView>(R.id.lang_image)!!
+
+        var lang_item = layoutView.findViewById<RelativeLayout>(R.id.lang_list)
     }
 }

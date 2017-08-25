@@ -3,6 +3,8 @@
     package="com.yung_coder.oluwole.akeko">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -19,6 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
+        <activity
+            android:name=".Material"
+            android:label="@string/title_activity_material"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

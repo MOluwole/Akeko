@@ -1,4 +1,4 @@
-package com.yung_coder.oluwole.akeko
+package com.yung_coder.oluwole.akeko.db
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -24,6 +24,7 @@ class MySqlHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "Akekoo") {
         p0?.createTable(AkekooTable.LANG_TABLE, true, AkekooTable.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT, AkekooTable.NAME to TEXT)
         p0?.createTable(AkekooTable.BOOK_TABLE, true, AkekooTable.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT, AkekooTable.LANG_ID to INTEGER, AkekooTable.TITLE to TEXT, AkekooTable.COPYRIGHT to TEXT)
         p0?.createTable(AkekooTable.VID_TABLE, true, AkekooTable.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT, AkekooTable.LANG_ID to INTEGER, AkekooTable.TITLE to TEXT, AkekooTable.COPYRIGHT to TEXT)
+        p0?.createTable(AkekooTable.TIMER_TABLE, true, AkekooTable.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT, AkekooTable.TIMER_COL to TEXT)
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
